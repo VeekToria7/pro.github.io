@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-align: left;
+}
+h3 p{
+    margin: 2px 2px;
+}
+h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-align: right;
+}
+p{
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+}
+h4 p{
+    font-size: 20px;
+    font-weight: 500;
+    color: green;
+    text-align: right;
+}
+p input{
+    font-size: 15px;
+    margin: 10px;
+    height:35px;
+    border: 2px solid black;
+}
+button{
+    font-size: 15px;
+    font-weight: 500;
+    background-color: blue;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid blue;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+h4 button{
+    text-align: center;
+    background-color: green;
+    border: 2px solid green;
+    width: 10%;
+}

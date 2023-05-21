@@ -1,0 +1,55 @@
+
+{% load static %}
+
+<style>
+    body{
+        font-size: 15px;
+        margin-left: 30px;
+        margin-top: 50px;
+    }
+    button{
+        margin-top: 20px;
+        border: 2px solid #8474A1;
+        background: #8474A1;
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 20px;
+        display: inline-block;
+        font-size: 12px;
+        position: relative;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    input{
+        height:30px;
+        border: 2px solid black;
+}
+p{
+    padding: 0;
+}
+</style>
+
+<h1>Payment Details</h1>
+
+<form method="post" action="">
+    {% csrf_token %}
+
+    <p>First name</p>
+    <p><input type="number" placeholder="Enter first name" name="first_name"/></p>
+
+    <p>Last name</p>
+    <p><input type="text" placeholder="Enter last name" name="last_name"/></p>
+
+    <p>Card Number</p>
+    <p><input type="number" placeholder="Enter card number" name="card_number"/></p>
+
+    <p>Expiration Date</p>
+    <p><input type="number" placeholder="Enter expiration date" name="expiration_date"></p>
+
+    <p>CVV</p>
+    <p><input type="number" placeholder="enter cvv" name="cvv"></p>
+    
+    <button>Purchase</button>
+</form>
+

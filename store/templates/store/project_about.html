@@ -1,0 +1,25 @@
+{% extends './base.html' %}
+{% load static %}
+{% block content %}
+    <div class="about-us">
+        <h5>About Us</h5>
+    </div>
+    <section class="about-us">
+    <div class="row">
+        <div class="about-col">
+            <h5>We are Your Distinct Online Clothing Store</h5>
+                <p>Tevez stores are attentive to buyers who value distinctive designs and high-quality items 
+                    that are impossible to obtain elsewhere. We regularly curate brand-new collections and 
+                    search for the hottest new products that our clients will like. Since our establishment in Abuja, 
+                    Nigeria in 2022, we are happy to serve as your preferred online clothing store.</p>
+                    <a class="hero-button" href="{% url 'product' %}">EXPLORE NOW</a> 
+        </div>
+        <div class="about-col">
+            <img src="{% static 'store/img/store.jpg' %}">
+        </div>
+    </div>
+   </section>
+ </section>
+</body>
+</html>
+{% endblock %}

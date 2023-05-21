@@ -1,0 +1,36 @@
+{% extends './base.html' %}
+
+{% block content %}
+{% load static %}
+    <style>
+        h1{
+            font-size: 30px;
+            margin-left: 40px;
+            margin-top: 40px;
+        }
+    </style>
+    
+        {% if all_product %}
+            <h1>Our Products</h1>
+            {% for category in all_category %}
+            <section class="product">
+                <h3>{{category.title}}</h3>
+                <div class="row">
+                    {% for product in all_product %}
+                        {% if product.category == category %}
+                            <div class="product-col">
+                                <img src="{{product.picture.url}}" width="100%">
+                                <p>${{product.price}}</p>
+                                <a class="hero-button" href="{% url 'add_to_cart' product.id %}">Buy</a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+            </section>
+            {% endfor %}
+                
+            </div>
+        {% else %}
+            <h1>No products</h1>
+        {% endif %}
+
+{% endblock %}

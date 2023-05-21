@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEVEZ WEBSITE</title>
+    <link rel="stylesheet" href="{% static 'store/project.css' %}">
+    <script src="https://kit.fontawesome.com/3cf324a843.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <style>
+        .feature{
+            background: url({% static 'store/img/second_bg_option-removebg-preview.png' %});
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            padding: 0 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+       
+        .cta{
+            margin: 100px auto;
+            width: 80%;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url({% static 'store/img/a.jpg' %});
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            text-align: center;
+            padding: 100px 0;
+}
+    </style>
+    <section class="header">
+        <div class="nav-bar">
+        <div class="icon">
+            <h2 class="logo">Te<span>Vez</span></h2>
+        </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">HOME</a></li>
+                    <li><a href="{% url 'product' %}">PRODUCTS</a></li>
+                    <li><a href="{% url 'about' %}">ABOUT</a></li>
+                    <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                    <li><a href="{% url 'faqs' %}">FAQ<small>s</small> </a></li>
+                    <li><a href="login">LOG-IN/SIGN-UP</a></li>
+                    <li><a href="{% url 'cart' %}">CARTS</a></li>
+                </ul>
+            </nav>
+           
+        </div>  
+    </section>
+
+    {% block content %}
+    {% endblock %}
+
+<section class="footer">
+
+</section>
+    <script src="project.js"></script>
+</body>
+</html>

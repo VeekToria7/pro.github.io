@@ -1,0 +1,59 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+      margin-left: 40px;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    button{
+        border: 2px solid #8474A1;
+        background: #8474A1;
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 20px;
+        display: inline-block;
+        font-size: 20px;
+        position: relative;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+    </style>
+
+
+    <div class="about-us">
+        <h5>Shopping Cart</h5>
+    </div>
+
+    <table>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+        </tr>
+        {% for cart in user_cart %}
+        <tr>
+            <td>{{cart.product.title}}</td>
+            <td>${{cart.product.price}}</td>
+          </tr>
+        {% endfor %}
+        
+      </table>
+      <a class="button" href="{% url 'checkout' %}"><button>Check out</button></a> 
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% load static %}
+
+
+<h3>Click here to Login</h3>
+<link rel="stylesheet" href="{% static 'store/login_project.css' %}"/>
+<style>
+    body{
+        margin-right: 70px;
+        margin-left: 70px;
+        margin-top: 100px;
+    }
+    button{
+        margin-top: 20px;
+    }
+    p{
+        margin-top: 20px;
+    }
+</style>
+
+<form method="post" action="">
+    {% csrf_token %}
+
+    {% if msg %}
+        <h3>{{msg}}</h3>
+    {% endif %}
+
+    <p>Username <input type="text" placeholder="Enter username" name="username"/></p>
+
+    <p>Password <input type="text" placeholder="Password" name="password"/></p>
+    </br>
+    <button>Login</button>
+
+</form>
+
+<h4>
+    <p>Don't have an account?</p>
+    <a href="{% url 'register_user' %}">Create Account</a>
+</h4>
+    

@@ -1,0 +1,64 @@
+{% extends './base.html' %}
+
+{% load static %}
+
+{% block content %}
+<section class="offer">
+    <div class="feature">
+       <h4>Super-value-deals</h4>
+       <h2>Shop the Latest Trends</h2>
+       <h1>On all products</h1>
+       <p>Save more with vouchers & up to 50% off!</p>
+       <a class="hero-button" href="{% url 'product' %}">Shop Now</a> 
+</section>
+
+
+<section class="collections">
+<h1>Our Collections</h1>
+<p>We have the Best Quality and Best Prices on all female clothings.</p>
+
+{% if all_categories %}
+<div class="row">
+{% for category in all_categories %}
+
+    <div class="collections-col">
+        <img src="{{category.picture.url}}">
+        <h3>{{category.title}}</h3>
+    </div>
+{% endfor %}
+</div>
+{% endif %}
+
+</section>
+
+
+    
+<section id="product1" class="section-p">
+<h2>Featured Products</h2>
+<p>Spring Collection New Modern Designs</p>
+<div class="pro-container">
+    <img src="{% static 'store/img/pro 1.jpg' %}">
+    <h3>Dior</h3>
+    <p>Grey Plain T-shirt</p>
+        <div class="rate">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <h4>#5,000</h4>
+        </div>
+        <a href="#"><i class="fa-thin fa-cart-shopping"></i></a>
+    
+</div>
+</section>
+  
+
+<section class="cta">
+<h4>Sales</h4>
+<h2>Ramadan Sales</h2>
+<p>up to 50% off on all Abayas and Scarfs</p>
+<a href="{% url 'product' %}" class="hero-btn">Explore Now</a> 
+
+</section>  
+{% endblock %}

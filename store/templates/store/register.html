@@ -1,0 +1,35 @@
+{% load static %}
+
+<h3>Click here to Register</h3>
+<link rel="stylesheet" href="{% static 'store/register.css' %}"/>
+
+
+
+<form method="post" action="">
+    {% csrf_token %}
+
+    {% if msg %}
+        <h3>{{msg}}</h3>
+    {% endif %}
+
+    <p>First name</p>
+    <p><input type="text" placeholder="Enter firstname" name="first_name"/></p>
+
+    <p>Last name</p>
+    <p><input type="text" placeholder="Enter lastname" name="last_name"/></p>
+
+    <p>User name</p>
+    <p><input type="text" placeholder="Enter username" name="username"></p>
+
+    <p>Email address</p>
+    <p><input type="text" placeholder="Enter email" name="email"/></p>
+
+    <p>Choice Password</p>
+    <p><input type="text" placeholder="Password" name="password" /></p>
+
+    <p>Confirm Password</p>
+    <p><input type="text" placeholder="Password" name="confirm_password"/></p>
+    </br>
+    <button>Register</button>
+</form>
+    
